@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditAddressDialog</class>
+ <widget class="QDialog" name="EditAddressDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>141</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Address</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+        background-color: #ffffff;
+        color: black;
+}
+
+QCheckBox {
+        border-radius: 4px;
+        border-width: 0;
+        border-style: none;
+        padding: 8px;
+        background-color: #0e585f;
+        color: white;
+}
+
+
+
+QFrame#SendCoinsEntry {
+        background-color: #ffffff;
+        border: none;
+        min-width: 10em;
+        padding: 6px;
+}
+
+
+QLabel {
+        color: black;
+}
+
+QLabel[openExternalLinks=true], QHeaderView {
+        color: #aaaaaa
+}
+
+QLabel[openExternalLinks=false] {
+        color: black;
+        font-weight: normal
+}
+
+QPushButton, QToolButton, QDialogButtonBox {
+        border: 2px solid #000000;
+        border-radius: 3px;
+        background-color: #0e585f;
+        color: white;
+        padding: 6px;
+        margin: 6px;
+}
+
+QPushButton:checked, QToolButton:checked {
+        color: #e86941;
+}
+
+QPushButton:pressed, QToolButton:pressed {
+        border-color: #e86941;
+        color: #e86941;
+}
+
+QPushButton:disabled, QToolButton:disabled {
+        color: #444;
+        background-color: #222222;
+}
+
+scrollAreaWidgetContents QToolButton {
+        border-radius: 8px;
+        border-width: 0px;
+}
+
+scrollAreaWidgetContents {
+        background: #222222
+}
+
+scrollAreaWidgetContents &gt; QFrame {
+        background-color: #222222;
+        border-width: 0px;
+        border-style: none;
+}
+
+QToolBar {
+        background: #ffffff;
+        border: 0px solid black;
+        padding: 3px;
+}
+
+QToolBar::handle {
+        image: url(handle.png);
+}
+
+QMenuBar {
+        background: #ffffff;
+}
+
+QMenuBar::item {
+        background: #333333;
+        color: white;
+}
+
+QStatusBar {
+        background: #ffffff;
+}
+
+QLineEdit {
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: #222222;
+        padding: 8px;
+        background-color: #0e585f;
+        color: black;
+}
+
+QLineEdit:disabled {
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: #222222;
+        padding: 8px;
+        background-color: #262626;
+        color: black;
+}
+
+QComboBox {
+        border-radius: 8px;
+        border-width: 0;
+        border-style: none;
+        padding: 4px;
+        background-color: #0e585f;
+        color: white;
+}
+
+payAmount {
+        border-radius: 8px;
+        border-width: 0;
+        border-style: none;
+        padding: 4px;
+        background-color: #0e585f;
+        color: white;
+}
+
+QComboBox::drop-down {
+        border-width: 0;
+        border-style: none;
+        background-color: #0e585f;
+        color: white;
+}
+
+QTableView {
+        background: #0e585f;
+        color: black;
+        border-style: none;
+        selection-background-color: #aaaaaa;
+        alternate-background-color: #222222;
+        selection-color: #000000;
+        border: 0px solid black;
+}
+
+QHeaderView {
+        color: #aaaaaa;
+        background-color: #0e585f;
+        background-image: none;
+}
+
+QHeaderView::section {
+        color: #aaaaaa;
+        background-color: #0e585f;
+}
+
+QHeaderView::section:checked {
+        background-color: #0e585f;
+}
+
+QTabWidget {
+        background: #0e585f;
+}
+
+QTabWidget::pane {
+        border-top: 1px solid #000000;
+        border: 2px solid #000000;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        background: #0e585f;
+}
+
+QTabWidget::tab-bar {
+        left: 5px;
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&amp;Label</string>
+       </property>
+       <property name="buddy">
+        <cstring>labelEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="labelEdit">
+       <property name="toolTip">
+        <string>The label associated with this address book entry</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>&amp;Address</string>
+       </property>
+       <property name="buddy">
+        <cstring>addressEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="addressEdit">
+       <property name="toolTip">
+        <string>The address associated with this address book entry. This can only be modified for sending addresses.</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>EditAddressDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>EditAddressDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
