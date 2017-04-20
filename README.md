@@ -1,11 +1,7 @@
 bitcoinplus (XBC)
 
-bitcointalk.org/index.php?topic=714606.0
-
-www.bitcoinplus.org
-
 ===================================
 
-Ports 8885 & RPC 8884
+Ports 8881 & RPC 8880
 
-Testnet 18885 & RPC 18884
+Testnet 18881 & RPC 18880
